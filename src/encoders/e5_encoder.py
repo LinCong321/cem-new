@@ -33,19 +33,3 @@ class E5Encoder(nn.Module):
             raise ValueError(f"Unknown pooling type: {self.pooling}")
 
         return embeddings
-
-
-if __name__ == "__main__":
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    encoder = E5Encoder().to(device)
-
-    sample_texts = [
-        "这是一个测试句子。",
-        "这是第二个测试。"
-    ]
-
-    with torch.no_grad():
-        embeddings = encoder(sample_texts)
-
-    print("输出向量形状:", embeddings.shape)
-    print("示例向量（第一条）:", embeddings[0][:5])

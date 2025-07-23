@@ -1,4 +1,5 @@
 import torch
+from cmm import trainer
 
 
 def test_e5_encoder():
@@ -25,7 +26,7 @@ def test_blt_encoder():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     encoder = BLTEncoder().to(device)
 
-    sample_tokens = torch.randint(0, 256, (2, 128), dtype=torch.uint8)
+    sample_tokens = torch.randint(0, 256, (2, 128), dtype=torch.long).to(device)
 
     with torch.no_grad():
         embeddings = encoder(sample_tokens)
@@ -35,5 +36,4 @@ def test_blt_encoder():
 
 
 if __name__ == "__main__":
-    test_e5_encoder()
-    test_blt_encoder()
+    trainer.launch()
