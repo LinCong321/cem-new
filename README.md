@@ -7,5 +7,10 @@ An important prerequisite for RAG is that we need to store the knowledge base, t
 
 Considering the massive size of documents, the compression and decompression time required to build and migrate the vector database is difficult to ignore. Therefore, we consider completing the embedding directly in the **compressed state**, which can save time and space complexity.
 
-## 1 Method
+## 1 Design
 
+## 2 Implementation
+
+## 3 Result
+
+## 4 Future Work
