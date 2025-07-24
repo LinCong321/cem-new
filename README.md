@@ -1,4 +1,4 @@
-﻿# cem-new
+﻿# CEM-new
  
 ## 0 Background
 **Retrieval-Augmented Generation (RAG)** refers to optimizing the output of **large language models (LLM)** so that they can reference authoritative knowledge bases outside the training data source before generating responses.
