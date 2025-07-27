@@ -1,5 +1,5 @@
 import torch
-from cmm import trainer
+# from cmm import trainer
 
 
 def test_e5_encoder():
@@ -36,4 +36,6 @@ def test_blt_encoder():
 
 
 if __name__ == "__main__":
-    trainer.launch()
+    test_e5_encoder()
+    test_blt_encoder()
+    # trainer.launch()
